@@ -1,6 +1,6 @@
 body {
   font-family: Arial, Helvetica, sans-serif;
-  background: #fef7dc;
+  background: #eeeeee;
 }
 
 h1 {
@@ -39,8 +39,8 @@ a:hover {
   justify-content: space-evenly;
   align-items: center;
   padding: 1rem;
-  background: #fde281;
-  box-shadow: #666 5px 5px 5px;
+  background: #212121;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 }
 
 .header {
