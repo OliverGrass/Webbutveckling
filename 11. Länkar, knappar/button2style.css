@@ -1,0 +1,40 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+a {
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.container {
+  margin: 1rem;
+  padding: 1rem;
+  width: 12rem;
+  background-color: #eeeeee;
+}
+
+.btn {
+  display: block;
+  width: 10rem;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #ccc;
+}
+
+.btn_dn {
+  border-left: solid red 10px;
+}
+
+.btn_ss {
+  border-left: solid orange 10px;
+}
+
+.btn_sv {
+  border-left: solid green 10px;
+}
+
+.btn_ab {
+  border-left: solid lightskyblue 10px;
+}
