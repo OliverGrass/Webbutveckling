@@ -1,0 +1,28 @@
+body {
+  background: #fffcdc;
+}
+
+h1 {
+  margin: 20px;
+  width: 30em;
+}
+
+div {
+  width: 30em;
+  margin: 20px;
+  padding: 20px;
+  background: linear-gradient(#fffcdc, #fef590);
+  box-shadow: 5px 5px 10px #444;
+}
+
+.one {
+  font-family: aguafina-script, cursive;
+}
+
+.two {
+  font-family: actor, sans-serif;
+}
+
+.three {
+  font-family: advent-pro, sans-serif;
+}

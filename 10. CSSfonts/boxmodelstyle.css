@@ -1,0 +1,17 @@
+.one {
+  background: #78c0a9;
+  margin: 20px;
+}
+
+.two {
+  background: #78c0a9;
+  margin: 20px;
+  padding: 20px;
+}
+
+.three {
+  background: #78c0a9;
+  margin: 20px;
+  padding: 20px;
+  border: 5px solid #448d76;
+}

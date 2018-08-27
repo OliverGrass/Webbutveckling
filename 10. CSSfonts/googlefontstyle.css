@@ -1,0 +1,30 @@
+@import url("https://fonts.googleapis.com/css?family=Indie+Flower|Oswald|Roboto");
+
+body {
+  background: #feeedc;
+}
+
+h1 {
+  margin: 20px;
+  width: 30em;
+}
+
+div {
+  width: 30em;
+  margin: 20px;
+  padding: 20px;
+  background: linear-gradient(#feeedc, #fdb768);
+  box-shadow: 5px 5px 10px #444;
+}
+
+.one {
+  font-family: "Roboto", sans-serif;
+}
+
+.two {
+  font-family: "Oswald", sans-serif;
+}
+
+.three {
+  font-family: "Indie Flower", cursive;
+}

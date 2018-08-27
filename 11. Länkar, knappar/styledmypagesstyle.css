@@ -1,0 +1,33 @@
+body {
+  font-family: "Courier New", Courier, monospace;
+  background: #fef7dc;
+}
+
+.container {
+  text-align: center;
+  margin: 10px;
+  padding: 0px;
+  width: 20%;
+  height: 400px;
+  float: left;
+  background: #fde281;
+  box-shadow: #666 5px 5px 5px;
+}
+
+a {
+  text-decoration: none;
+  font-weight: 700;
+  color: #977d20;
+  width: 10em;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 10px;
+  padding: 5px;
+  border: solid #977d20 2px;
+  border-radius: 20px;
+}
+
+a:hover {
+  background: #5e4d0f;
+}

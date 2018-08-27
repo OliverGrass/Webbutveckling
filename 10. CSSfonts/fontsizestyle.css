@@ -1,0 +1,32 @@
+body {
+  font-family: "Courier New", Courier, monospace;
+  background: #dee9fc;
+}
+
+h1 {
+  margin: 20px;
+  width: 30em;
+}
+
+div {
+  width: 30em;
+  margin: 20px;
+  padding: 20px;
+  background: linear-gradient(#dee9fc, #6395f2);
+  box-shadow: 5px 5px 10px #444;
+}
+
+.small {
+  font-size: 0.5em;
+  font-weight: lighter;
+}
+
+.large {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.larger {
+  font-size: 2em;
+  font-weight: bolder;
+}

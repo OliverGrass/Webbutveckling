@@ -1,0 +1,9 @@
+body {
+  width: 20rem;
+  padding: 5px;
+  background-color: #ccccff;
+}
+
+a {
+  display: block;
+}
