@@ -1,0 +1,13 @@
+body {
+  height: 98vh;
+  background: url("../images/rio.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+p {
+  line-height: 3em;
+  width: 20em;
+}

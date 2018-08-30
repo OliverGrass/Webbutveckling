@@ -1,0 +1,48 @@
+body {
+  font-family: "Courier New", Courier, monospace;
+  height: 98vh;
+  background: url("../images/Beach_Horizon.jpg");
+}
+
+h1 {
+  margin: 1em;
+  color: #fff;
+}
+
+a {
+  text-decoration: none;
+  font-weight: 500;
+  color: #fff;
+  padding: 1em;
+  border: solid 1px #fff;
+}
+
+a:hover {
+  border: solid 2px #fff;
+  font-weight: 1000;
+}
+
+i {
+  color: #ffffff;
+}
+
+#bigtext {
+  font-family: "Arial Black", sans-serif;
+  text-align: center;
+  width: 400px;
+  margin: 60px auto;
+  text-transform: uppercase;
+  line-height: 0.75;
+  letter-spacing: -3px;
+}
+
+.container {
+  height: 70%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.center {
+  text-align: center;
+}

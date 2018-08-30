@@ -1,0 +1,49 @@
+@import url("https://fonts.googleapis.com/css?family=Dancing+Script");
+
+body {
+  height: 98vh;
+  color: #fff;
+  background: url("../images/road.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+img {
+  margin: 1em;
+  border: solid 5px #fff;
+  border-radius: 5px;
+}
+
+h1 {
+  text-align: center;
+  font-size: 72px;
+  font-family: "Dancing Script", cursive;
+}
+
+p {
+  padding: 10px;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  box-shadow: 0px 0px 13px #444;
+  width: 70%;
+  margin: auto;
+}
+
+.floatright {
+  float: right;
+  margin-left: 8px;
+}
+
+.floatleft {
+  float: left;
+  margin-right: 12px;
+}
+
+.tiltright {
+  transform: rotate(10deg);
+}
+
+.tiltleft {
+  transform: rotate(-10deg);
+}

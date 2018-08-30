@@ -19,6 +19,7 @@ body {
     margin-bottom: 10px;
     border: solid #fff 4px;
     border-radius: 20px;
+    transition: all 0.3s ease-in;
 }
 
 .btn:hover {
