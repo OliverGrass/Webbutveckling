@@ -1,0 +1,121 @@
+@import url("https://fonts.googleapis.com/css?family=Raleway");
+
+body {
+  height: 100vh;
+  width: 99.5vw;
+  margin: 0px;
+  overflow-x: hidden;
+  font-family: "Raleway", sans-serif;
+  color: #ffffff;
+}
+
+.panel {
+  position: relative;
+  width: 100%;
+  background-position: center center;
+  background-origin: border-box;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: 2px 4px solid #ffffff;
+}
+
+.info {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 300px;
+  text-align: center;
+  font-weight: bold;
+  text-shadow: 0px 0px 4px #000, 0px 0px 3px #000;
+}
+
+.info img {
+  height: 100px;
+  width: 100px;
+}
+
+.info a {
+  text-decoration: none;
+  display: block;
+  color: #fff;
+}
+
+.info h1 {
+  font-weight: 100;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+.infotext {
+  font-size: 20px;
+  letter-spacing: 3px;
+}
+
+.button {
+  margin: 20px auto;
+  width: 140px;
+  height: 30px;
+  border: 2px solid #fff;
+  padding-top: 14px;
+}
+
+.button:hover {
+  color: #000;
+  background-color: #fff;
+  text-shadow: 0px 0px 8px #fff;
+}
+
+.nav {
+  display: inline-block;
+}
+
+.flagsize {
+  height: 45px;
+  width: 60px;
+}
+
+.icon {
+  background: url("../images/logo.png");
+}
+
+#first {
+  height: 100%;
+  background: url("../images/Golden_Gate_1920x1080.png");
+  background-position: top center;
+}
+
+#second {
+  height: 100%;
+  background: url("../images/Colosseum_1920x1080.png");
+}
+
+#third {
+  height: 100%;
+  background: url("../images/Great_Wall_1920x1080.png");
+}
+
+#fourth {
+  height: 100%;
+  background: url("../images/Machu_Pichu_1920x1080.png");
+}
+
+#fifth {
+  height: 100%;
+  background: url("../images/Niagara_Falls_1920x1080.png");
+}
+
+#sixth {
+  height: 100%;
+  background: url("../images/Pyramids_1920x1080.png");
+}
+
+#seventh {
+  height: 100%;
+  background: url("../images/Taj_Mahal_1920x1080.png");
+}
+
+#eighth {
+  height: 100%;
+  background: url("../images/Chichen_1920x1080.png");
+}

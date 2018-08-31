@@ -1,0 +1,59 @@
+body {
+  height: 100vh;
+  width: 99.5vw;
+  margin: 0px;
+  overflow-x: hidden;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #ffffff;
+}
+
+.panel {
+  position: relative;
+  width: 100%;
+  background-position: center center;
+  background-origin: border-box;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: 2px 4px solid #ffffff;
+}
+
+#first {
+  height: 80%;
+  background: url("../images/Golden_Gate_1920x1080.png");
+  background-position: top center;
+}
+
+#second {
+  height: 80%;
+  background: url("../images/Colosseum_1920x1080.png");
+}
+
+#third {
+  height: 80%;
+  background: url("../images/Great_Wall_1920x1080.png");
+}
+
+#fourth {
+  height: 80%;
+  background: url("../images/Machu_Pichu_1920x1080.png");
+}
+
+#fifth {
+  height: 80%;
+  background: url("../images/Niagara_Falls_1920x1080.png");
+}
+
+#sixth {
+  height: 80%;
+  background: url("../images/Pyramids_1920x1080.png");
+}
+
+#seventh {
+  height: 80%;
+  background: url("../images/Taj_Mahal_1920x1080.png");
+}
+
+#eighth {
+  height: 80%;
+  background: url("../images/Chichen_1920x1080.png");
+}

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Images in Divs</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.1.0/css/flag-icon.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+    crossorigin="anonymous">
+  <link rel="stylesheet" href="css/travelagentstyle.css">
+  <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+</head>
+
+<body>
+  <div id="top" class="panel"></div>
+  <div id="first" class="panel">
+    <div class="logo"></div>
+    <div class="info">
+      <img src="images/logo.png" alt="logo">
+      <h1>Travel with us</h1>
+      <p>Go to far away places and see the world</p>
+      <a href="#second"><i class="fa fa-angle-down fa-2x"></i></a>
+    </div>
+  </div>
+  <div id="second" class="panel">
+    <div class="info">
+      <div class="flagsize flag-icon flag-icon-it"></div>
+      <h1>Rome the eternal city</h1>
+      <span class="infotext">SPQR - Senatus Populusque Romanus</span>
+      <a href="#top" class="button">Check it out!</a>
+      <a href="#first"><i class="fa fa-angle-up fa-2x"></i></a>
+      <a href="#third"><i class="fa fa-angle-down fa-2x"></i></a>
+    </div>
+  </div>
+  <div id="third" class="panel">
+    <div class="info">
+      <div class="flagsize flag-icon flag-icon-cn"></div>
+      <h1>Great wall of China</h1>
+      <span class="infotext">Tan Daoji - "the long wall of 10,000 miles"</span>ch
+      <a href="#top" class="button">Check it out!</a>
+      <a href="#second"><i class="fa fa-angle-up fa-2x"></i></a>
+      <a href="#fourth"><i class="fa fa-angle-down fa-2x"></i></a>
+    </div>
+  </div>
+  <div id="fourth" class="panel">
+    <div class="info">
+      <div class="flagsize flag-icon flag-icon-pe"></div>
+      <h1>Machu Pichu</h1>
+      <span class="infotext">Ruins of an Ancient Civilization</span>
+      <a href="#top" class="button">Check it out!</a>
+      <a href="#third"><i class="fa fa-angle-up fa-2x"></i></a>
+      <a href="#fifth"><i class="fa fa-angle-down fa-2x"></i></a>
+    </div>
+  </div>
+  <div id="fifth" class="panel">
+    <div class="info">
+      <div class="flagsize flag-icon flag-icon-ca"></div>
+      <h1>Niagara Falls</h1>
+      <span class="infotext">"That's a lot of water"</span>
+      <a href="#top" class="button">Check it out!</a>
+      <a href="#fourth"><i class="fa fa-angle-up fa-2x"></i></a>
+      <a href="#sixth"><i class="fa fa-angle-down fa-2x"></i></a>
+    </div>
+  </div>
+  <div id="sixth" class="panel">
+    <div class="info">
+      <div class="flagsize flag-icon flag-icon-eg"></div>
+      <h1>The pyramids of giza</h1>
+      <span class="infotext">Wonders of the Ancient World</span>
+      <a href="#top" class="button">Check it out!</a>
+      <a href="#fifth"><i class="fa fa-angle-up fa-2x"></i></a>
+      <a href="#seventh"><i class="fa fa-angle-down fa-2x"></i></a>
+    </div>
+  </div>
+  <div id="seventh" class="panel">
+    <div class="info">
+      <div class="flagsize flag-icon flag-icon-in"></div>
+      <h1>Taj Mahal</h1>
+      <span class="infotext">An Emperor’s Passion Wrought in Stone</span>
+      <a href="#top" class="button">Check it out!</a>
+      <a href="#sixth"><i class="fa fa-angle-up fa-2x"></i></a>
+      <a href="#eighth"><i class="fa fa-angle-down fa-2x"></i></a>
+    </div>
+  </div>
+  <div id="eighth" class="panel">
+    <div class="info">
+      <div class="flagsize flag-icon flag-icon-mx"></div>
+      <h1>Chichén itzá</h1>
+      <span class="infotext"><i>The</i> Place to Visit in Mexico</span>
+      <a href="#top" class="button">Check it out!</a>
+      <a href="#seventh"><i class="fa fa-angle-up fa-2x"></i></a>
+    </div>
+  </div>
+
+  <script>
+
+    $("a").on("click", function (event) {
+      if (this.hash !== "");
+      {
+        event.preventDefault();
+
+        const hash = this.hash;
+
+        $("html, body").animate(
+          {
+            scrollTop: $(hash).offset().top
+          },
+          800,
+          function () {
+            window.location.hash = hash;
+          }
+        );
+      }
+    });
+
+  </script>
+</body>
+
+</html>
