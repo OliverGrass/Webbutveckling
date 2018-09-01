@@ -2,11 +2,17 @@
 
 body {
   height: 100vh;
-  width: calc(100vw - 20px);
+  width: calc(100vw - 8px);
   margin: 0px;
   overflow-x: hidden;
   font-family: "Raleway", sans-serif;
   color: #ffffff;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+  text-shadow: 0px 0px 8px #000, 0px 0px 4px #000;
 }
 
 #slider {
@@ -17,89 +23,65 @@ body {
 
 #slider .slidecontainer {
   display: block;
-  width: 18000px;
+  width: 16000px;
   height: 100%;
   margin: 0;
   padding: 0;
 }
 
-#slider .slide {
+.slide {
   float: left;
   height: 100vh;
-  width: calc(100vw - 10px);
+  width: calc(100vw - 17px);
   position: relative;
-  background-position: center center;
+  background-position: top center;
   background-origin: border-box;
   background-repeat: no-repeat;
+  background-attachment: fixed;
   background-size: cover;
 }
 
-#top {
-  height: 100%;
-  background-image: url("../images/Golden_Gate_1920x1080.png");
-  background-position: top center;
-  border-top-width: 4px;
-  background-attachment: fixed;
+.slide img {
+  height: 150px;
+  width: 150px;
 }
 
-#topslide {
-  height: 100%;
+#top {
   background-image: url("../images/Golden_Gate_1920x1080.png");
-  background-position: top center;
-  border-top-width: 4px;
-  background-attachment: fixed;
 }
 
 #firstslide {
-  height: 100%;
   background-image: url("../images/Colosseum_1920x1080.png");
-  background-position: top center;
-  background-attachment: fixed;
 }
 
 #secondslide {
-  height: 100%;
   background-image: url("../images/Great_Wall_1920x1080.png");
-  background-position: top center;
-  background-attachment: fixed;
 }
 
 #thirdslide {
-  height: 100%;
   background-image: url("../images/Machu_Pichu_1920x1080.png");
-  background-position: top center;
-  background-attachment: fixed;
 }
 
 #fourthslide {
-  height: 100%;
   background-image: url("../images/Niagara_Falls_1920x1080.png");
-  background-position: top center;
-  background-attachment: fixed;
 }
 
 #fifthslide {
-  height: 100%;
   background-image: url("../images/Pyramids_1920x1080.png");
-  background-position: top center;
-  background-attachment: fixed;
 }
 
 #sixthslide {
-  height: 100%;
   background-image: url("../images/Taj_Mahal_1920x1080.png");
-  background-position: top center;
-  background-attachment: fixed;
 }
 
 #seventhslide {
-  height: 100%;
   background-image: url("../images/Chichen_1920x1080.png");
-  background-position: top center;
-  background-attachment: fixed;
 }
 
-#menu {
+.menu {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
   height: 60px;
   background-color: rgba(255, 255, 255, 0.2);
   text-align: center;
@@ -107,24 +89,22 @@ body {
   position: fixed;
   top: 0;
   z-index: 9999;
+  transition: 0.5s all ease-out;
 }
 
-#menu a {
+.menu a {
   display: inline-block;
   font-weight: bold;
   font-size: 20px;
   height: 20px;
-  color: #fff;
   padding: 20px 16px;
-  text-decoration: none;
-  text-shadow: 0px 0px 8px #000, 0px 0px 4px #000;
 }
 
-#menu a:hover {
+.menu a:hover {
   color: #01266d;
 }
 
-#menu img {
+.menu img {
   float: left;
   height: 35px;
   width: 35px;
@@ -144,18 +124,7 @@ body {
   margin: 20px;
 }
 
-.panel {
-  position: relative;
-  width: 100%;
-  background-position: center center;
-  background-origin: border-box;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
-  border: 2px 4px solid #ffffff;
-}
-
-.info {
+.sliderinfo {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -167,24 +136,61 @@ body {
   text-shadow: 0px 0px 4px #000, 0px 0px 3px #000;
 }
 
-.info img {
-  height: 100px;
-  width: 100px;
-}
-
-.info a {
-  text-decoration: none;
-  display: block;
-  color: #fff;
-}
-
-.info h1 {
+.sliderinfo h1 {
   font-weight: 100;
   letter-spacing: 3px;
   text-transform: uppercase;
 }
 
+.sliderinfo i {
+  display: block;
+}
+
+.panel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-attachment: fixed;
+}
+
+.info {
+  height: 100%;
+  display: grid;
+  grid-gap: 2em;
+  align-items: center;
+  margin: 1rem 4rem 1rem 1rem;
+  color: #000;
+}
+
+.twoinfo {
+  grid-template-columns: 20px 1fr 1fr;
+}
+
+.threeinfo {
+  grid-template-columns: 20px 1fr 2fr 3fr;
+  grid-template-rows: 1fr;
+  align-items: center;
+}
+
+.fourinfo {
+  grid-template-columns: 20px repeat(4, 1fr);
+}
+
+.fourinfo img {
+  justify-self: stretch;
+  height: 100px;
+  width: 100px;
+}
+
+.leftnav {
+  display: flex;
+  flex-direction: column;
+  font-size: 20px;
+  font-weight: bold;
+}
+
 .button {
+  display: block;
   margin: 20px auto;
   width: 140px;
   height: 30px;
@@ -196,58 +202,6 @@ body {
   color: #000;
   background-color: #fff;
   text-shadow: 0px 0px 8px #fff;
-}
-
-.twocols {
-  display: inline-block;
-  width: 40%;
-  margin-left: 5%;
-}
-
-.twocols p {
-  color: #000;
-  text-align: left;
-  text-shadow: none;
-}
-
-.threecols {
-  display: inline-grid;
-  width: 30%;
-  margin-left: 3%;
-}
-
-.fourcols {
-  display: inline-block;
-  width: 20%;
-  margin-left: 3%;
-}
-
-.fourcols img {
-  height: 150px;
-  width: 150px;
-}
-
-.fourcols p {
-  color: #000;
-  text-shadow: none;
-  text-align: justify;
-}
-
-.leftnav {
-  position: absolute;
-  top: 50%;
-  left: 0%;
-  transform: translate(0%, -50%);
-  margin-left: 10px;
-  width: 30px;
-  font-weight: bold;
-  text-shadow: 0px 0px 8px #000, 0px 0px 6px #000;
-}
-
-.leftnav a {
-  text-decoration: none;
-  font-size: 20px;
-  color: #fff;
 }
 
 .forminput {
@@ -301,49 +255,115 @@ textarea {
   width: 60px;
 }
 
+.content {
+  height: 40%;
+  background: #fff;
+}
+
+.panelimage {
+  min-height: 60%;
+  background-position: center center;
+}
+
+.menu .icon {
+  display: none;
+}
+
 #first {
   height: 100%;
   background: url("../images/Golden_Gate_1920x1080.png");
-  background-position: center center;
+  background-attachment: fixed;
 }
 
 #second {
-  height: 51%;
   background: url("../images/Colosseum_1920x1080.png");
-  background-position: center center;
-}
-
-#secondcontent {
-  height: 49%;
-  background: #fff;
+  background-attachment: fixed;
 }
 
 #third {
-  height: 51%;
   background: url("../images/Great_Wall_1920x1080.png");
-}
-
-#thirdcontent {
-  height: 49%;
-  background: #fff;
+  background-attachment: fixed;
 }
 
 #fourth {
-  height: 45%;
   background: url("../images/Machu_Pichu_1920x1080.png");
-}
-
-#fourthcontent {
-  height: 55%;
-  background: #fff;
+  background-attachment: fixed;
 }
 
 #fifth {
-  height: 60%;
   background: url("../images/Niagara_Falls_1920x1080.png");
+  background-attachment: fixed;
 }
 
-#fifthcontent {
-  height: 40%;
-  background: #fff;
+@media screen and (max-width: 860px) {
+  .content {
+    height: auto;
+  }
+
+  .fourinfo {
+    grid-template-columns: 20px repeat(2, 1fr);
+  }
+
+  .fourcols:nth-child(1) {
+    grid-column: 2;
+  }
+
+  .fourcols:nth-child(2) {
+    grid-column: 2;
+  }
+
+  .fourcols:nth-child(3) {
+    grid-column: 3;
+  }
+
+  .fourcols:nth-child(4) {
+    grid-column: 2;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .menu .icon {
+    position: absolute;
+    display: block;
+    left: 0;
+    top: 0;
+  }
+
+  .menu a:not(:first-child) {
+    display: none;
+    width: 100px;
+    margin: auto;
+  }
+
+  .menu.responsive {
+    position: absolute;
+    flex-flow: column;
+    transition: 0.5s all ease-out;
+    height: 400px;
+  }
+
+  .menu.responsive a:not(:first-child) {
+    display: block;
+  }
+
+  .twoinfo {
+    grid-template-columns: 20px 1fr;
+  }
+
+  .twocols {
+    grid-column: 2 / span 2;
+  }
+
+  .threeinfo {
+    display: block;
+    width: 100%;
+  }
+
+  .fourinfo {
+    display: inline-block;
+  }
+
+  .map {
+    width: 400px;
+  }
 }
