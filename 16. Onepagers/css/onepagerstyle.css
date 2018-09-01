@@ -193,14 +193,14 @@ textarea {
 
 #first {
   height: 100%;
-  background: url("/15. Bilder i divs/images/Golden_Gate_1920x1080.png");
+  background: url("../images/Golden_Gate_1920x1080.png");
   background-position: center center;
   background-attachment: fixed;
 }
 
 #second {
   height: 51%;
-  background: url("/15. Bilder i divs/images/Colosseum_1920x1080.png");
+  background: url("../images/Colosseum_1920x1080.png");
   background-position: center center;
   background-attachment: fixed;
 }
@@ -212,7 +212,7 @@ textarea {
 
 #third {
   height: 51%;
-  background: url("/15. Bilder i divs/images/Great_Wall_1920x1080.png");
+  background: url("../images/Great_Wall_1920x1080.png");
   background-attachment: fixed;
 }
 
@@ -223,7 +223,7 @@ textarea {
 
 #fourth {
   height: 45%;
-  background: url("/15. Bilder i divs/images/Machu_Pichu_1920x1080.png");
+  background: url("../images/Machu_Pichu_1920x1080.png");
   background-attachment: fixed;
 }
 
@@ -234,7 +234,7 @@ textarea {
 
 #fifth {
   height: 60%;
-  background: url("/15. Bilder i divs/images/Niagara_Falls_1920x1080.png");
+  background: url("../images/Niagara_Falls_1920x1080.png");
   background-attachment: fixed;
 }
 

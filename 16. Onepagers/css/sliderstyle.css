@@ -36,7 +36,7 @@ body {
 
 #top {
   height: 100%;
-  background-image: url("/15. Bilder i divs/images/Golden_Gate_1920x1080.png");
+  background-image: url("../images/Golden_Gate_1920x1080.png");
   background-position: top center;
   border-top-width: 4px;
   background-attachment: fixed;
@@ -44,7 +44,7 @@ body {
 
 #topslide {
   height: 100%;
-  background-image: url("/15. Bilder i divs/images/Golden_Gate_1920x1080.png");
+  background-image: url("../images/Golden_Gate_1920x1080.png");
   background-position: top center;
   border-top-width: 4px;
   background-attachment: fixed;
@@ -52,49 +52,49 @@ body {
 
 #firstslide {
   height: 100%;
-  background-image: url("/15. Bilder i divs/images/Colosseum_1920x1080.png");
+  background-image: url("../images/Colosseum_1920x1080.png");
   background-position: top center;
   background-attachment: fixed;
 }
 
 #secondslide {
   height: 100%;
-  background-image: url("/15. Bilder i divs/images/Great_Wall_1920x1080.png");
+  background-image: url("../images/Great_Wall_1920x1080.png");
   background-position: top center;
   background-attachment: fixed;
 }
 
 #thirdslide {
   height: 100%;
-  background-image: url("/15. Bilder i divs/images/Machu_Pichu_1920x1080.png");
+  background-image: url("../images/Machu_Pichu_1920x1080.png");
   background-position: top center;
   background-attachment: fixed;
 }
 
 #fourthslide {
   height: 100%;
-  background-image: url("/15. Bilder i divs/images/Niagara_Falls_1920x1080.png");
+  background-image: url("../images/Niagara_Falls_1920x1080.png");
   background-position: top center;
   background-attachment: fixed;
 }
 
 #fifthslide {
   height: 100%;
-  background-image: url("/15. Bilder i divs/images/Pyramids_1920x1080.png");
+  background-image: url("../images/Pyramids_1920x1080.png");
   background-position: top center;
   background-attachment: fixed;
 }
 
 #sixthslide {
   height: 100%;
-  background-image: url("/15. Bilder i divs/images/Taj_Mahal_1920x1080.png");
+  background-image: url("../images/Taj_Mahal_1920x1080.png");
   background-position: top center;
   background-attachment: fixed;
 }
 
 #seventhslide {
   height: 100%;
-  background-image: url("/15. Bilder i divs/images/Chichen_1920x1080.png");
+  background-image: url("../images/Chichen_1920x1080.png");
   background-position: top center;
   background-attachment: fixed;
 }
@@ -302,14 +302,14 @@ textarea {
 
 #first {
   height: 100%;
-  background: url("/15. Bilder i divs/images/Golden_Gate_1920x1080.png");
+  background: url("../images/Golden_Gate_1920x1080.png");
   background-position: center center;
   background-attachment: fixed;
 }
 
 #second {
   height: 51%;
-  background: url("/15. Bilder i divs/images/Colosseum_1920x1080.png");
+  background: url("../images/Colosseum_1920x1080.png");
   background-position: center center;
   background-attachment: fixed;
 }
@@ -321,7 +321,7 @@ textarea {
 
 #third {
   height: 51%;
-  background: url("/15. Bilder i divs/images/Great_Wall_1920x1080.png");
+  background: url("../images/Great_Wall_1920x1080.png");
   background-attachment: fixed;
 }
 
@@ -332,7 +332,7 @@ textarea {
 
 #fourth {
   height: 45%;
-  background: url("/15. Bilder i divs/images/Machu_Pichu_1920x1080.png");
+  background: url("../images/Machu_Pichu_1920x1080.png");
   background-attachment: fixed;
 }
 
@@ -343,7 +343,7 @@ textarea {
 
 #fifth {
   height: 60%;
-  background: url("/15. Bilder i divs/images/Niagara_Falls_1920x1080.png");
+  background: url("../images/Niagara_Falls_1920x1080.png");
   background-attachment: fixed;
 }
 
