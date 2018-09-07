@@ -32,9 +32,9 @@
     $(document).ready(function () {
 
       //settings for slider
-      var width = $("body").prop("clientWidth") - 8;
-      var animationSpeed = 1500;
-      var pause = 5000;
+      var width = $("body").prop("clientWidth");
+      var animationSpeed = 2000;
+      var pause = 10000;
       var currentSlide = 1;
 
       //globals for slider
@@ -46,10 +46,9 @@
       var $slideContainer = $('.slidecontainer', $slider);
       var $slides = $('.slide', $slider);
 
-      //eventhandler for slider
-      $slideContainer
+      /* $slideContainer
         .on('mouseenter', pauseSlider)
-        .on('mouseleave', startSlider);
+        .on('mouseleave', startSlider); */
 
 
       $(window).on('resize', function () {
@@ -163,9 +162,16 @@
           <a href="#second" class="button">Check it out!</a>
         </div>
       </div>
-      <div id="topslide" class="slide">
+      <div id="top" class="slide">
+        <div class="sliderinfo">
+          <img src="images/logo.png" alt="logo">
+          <h1>TRAVEL WITH US</h1>
+          <span class="infotext">Go to far away places and see the world</span>
+          <a href="#second"><i class="fa fa-angle-down fa-2x"></i></a>
+        </div>
       </div>
     </div>
+  </div>
   </div>
   </div>
 
@@ -271,6 +277,7 @@
       <div class="twocols">
         <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2248.2431666262596!2d13.175968115928578!3d55.70214488053981!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x465397ded38dcf73%3A0x8f3868f1d33a6044!2sPolhemskolan!5e0!3m2!1ssv!2sse!4v1535809235257"
           width="700" height="250" frameborder="0" style="border:0" allowfullscreen></iframe>
+        <span class="address">At Polhemskolan</span>
       </div>
     </div>
   </div>

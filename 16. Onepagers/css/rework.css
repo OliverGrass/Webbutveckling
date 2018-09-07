@@ -2,7 +2,7 @@
 
 body {
   height: 100vh;
-  width: calc(100vw - 8px);
+  width: 100vw;
   margin: 0px;
   overflow-x: hidden;
   font-family: "Raleway", sans-serif;
@@ -12,7 +12,7 @@ body {
 a {
   text-decoration: none;
   color: #fff;
-  text-shadow: 0px 0px 8px #000, 0px 0px 4px #000;
+  text-shadow: 0px 0px 2px #000, 0px 0px 1px #000;
 }
 
 #slider {
@@ -32,7 +32,7 @@ a {
 .slide {
   float: left;
   height: 100vh;
-  width: calc(100vw - 17px);
+  width: 100vw;
   position: relative;
   background-position: top center;
   background-origin: border-box;
@@ -78,12 +78,17 @@ a {
   background-image: url("../images/Chichen_1920x1080.png");
 }
 
+#topslide {
+  background-image: url("../images/Golden_Gate_1920x1080.png");
+}
+
 .menu {
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
   height: 60px;
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: rgba(255, 255, 255, 0.95);
+  box-shadow: 0px 0px 8px #444;
   text-align: center;
   width: 100%;
   position: fixed;
@@ -93,6 +98,8 @@ a {
 }
 
 .menu a {
+  color: #000;
+  text-shadow: 0px 0px 2px #fff, 0px 0px 1px #fff;
   display: inline-block;
   font-weight: bold;
   font-size: 20px;
@@ -101,7 +108,7 @@ a {
 }
 
 .menu a:hover {
-  color: #01266d;
+  text-shadow: 0px 0px 3px #c8c8c8, 0px 0px 2px #c8c8c8;
 }
 
 .menu img {
@@ -112,7 +119,14 @@ a {
   margin-left: 8px;
 }
 
+.menu .icon {
+  display: none;
+}
+
 #footer {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
   height: 10%;
   background: #000;
   text-align: center;
@@ -133,7 +147,7 @@ a {
   min-width: 90%;
   text-align: center;
   font-weight: bold;
-  text-shadow: 0px 0px 4px #000, 0px 0px 3px #000;
+  text-shadow: 0px 0px 2px #000, 0px 0px 1px #000;
 }
 
 .sliderinfo h1 {
@@ -201,7 +215,7 @@ a {
 .button:hover {
   color: #000;
   background-color: #fff;
-  text-shadow: 0px 0px 8px #fff;
+  text-shadow: 0px 0px 1px #fff;
 }
 
 .forminput {
@@ -256,16 +270,16 @@ textarea {
 }
 
 .content {
-  height: 40%;
+  height: 50%;
   background: #fff;
 }
 
 .panelimage {
-  min-height: 60%;
+  min-height: 50%;
   background-position: center center;
 }
 
-.menu .icon {
+.address {
   display: none;
 }
 
@@ -322,6 +336,13 @@ textarea {
 }
 
 @media screen and (max-width: 650px) {
+  .menu {
+    flex-flow: column;
+    transition: 0.5s all ease-out;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 0px 8px #444;
+  }
+
   .menu .icon {
     position: absolute;
     display: block;
@@ -331,19 +352,26 @@ textarea {
 
   .menu a:not(:first-child) {
     display: none;
-    width: 100px;
-    margin: auto;
   }
 
   .menu.responsive {
-    position: absolute;
-    flex-flow: column;
-    transition: 0.5s all ease-out;
     height: 400px;
   }
 
   .menu.responsive a:not(:first-child) {
+    animation: slide 0.5s ease-out forwards;
     display: block;
+    width: 50%;
+    margin: auto;
+  }
+
+  @keyframes slide {
+    0% {
+      transform: translate(0, -150px);
+    }
+    100% {
+      transform: translate(0, 0);
+    }
   }
 
   .twoinfo {
@@ -364,6 +392,21 @@ textarea {
   }
 
   .map {
-    width: 400px;
+    display: none;
+  }
+
+  .address {
+    display: block;
+  }
+
+  #footer {
+    position: absolute;
+    flex-flow: column;
+    height: 300px;
+    width: 100%;
+  }
+
+  #footer a {
+    display: block;
   }
 }
