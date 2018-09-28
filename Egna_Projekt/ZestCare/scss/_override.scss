@@ -1,0 +1,34 @@
+@media (max-width: 768px) {
+  #services i {
+    display: none;
+  }
+
+  header.masthead {
+    .intro-text {
+      .intro-heading {
+        font-size: 25px;
+      }
+    }
+  }
+
+  section {
+    h2.section-heading {
+      font-size: 25px;
+    }
+  }
+
+  .btn {
+    font-weight: 500;
+    margin-bottom: 20px;
+  }
+
+  .btn-xl {
+    font-size: 18px;
+    padding: 5px 10px;
+    margin-bottom: 10px;
+  }
+
+  .benefits {
+    display: none;
+  }
+}
