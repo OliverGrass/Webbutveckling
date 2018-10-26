@@ -1,0 +1,14 @@
+.grid-parent {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  background-color: #bd3737;
+  padding: 10px;
+  width: 50vw;
+}
+.grid-child {
+  background-color: #ffffffb9;
+  border: 1px solid #000;
+  text-align: center;
+  padding: 20px;
+  font-size: 30px;
+}

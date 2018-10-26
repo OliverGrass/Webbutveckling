@@ -1,0 +1,24 @@
+.grid-parent {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-gap: 10px;
+  background-color: #bd3737;
+  padding: 10px;
+  width: 50vw;
+}
+.grid-parent > div {
+  background-color: #ffffffb9;
+  text-align: center;
+  padding: 20px 0;
+  font-size: 30px;
+}
+.grid-child1 {
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+.grid-child2 {
+  grid-row-start: 1;
+  grid-row-end: 3;
+  grid-column-start: 3;
+  grid-column-end: 3;
+}
