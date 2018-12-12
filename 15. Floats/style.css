@@ -218,44 +218,6 @@ a.more:hover {
   float: right;
 }
 
-.image_wrapper {
-  display: inline-block;
-  border: 5px solid #fff;
-  background: none;
-  margin-bottom: 5px;
-}
-
-.image_fl {
-  float: left;
-  margin: 3px 15px 0 0;
-}
-
-.image_fr {
-  float: right;
-  margin: 3px 0 0 15px;
-}
-
-.list {
-  margin: 20px 0 20px 20px;
-  padding: 0;
-  list-style: none;
-}
-
-.list li {
-  color: #e47100;
-  margin: 0;
-  padding: 0 0 0 20px;
-}
-
-.list li a {
-  color: #e47100;
-  font-weight: normal;
-}
-
-.list li a:hover {
-  color: #e47100;
-}
-
 .col_880f {
   clear: both;
   width: 880px;
@@ -286,17 +248,6 @@ a.more:hover {
 
 .fp_box h2 {
   font-size: 24px;
-}
-
-.home_intro {
-  font-size: 20px;
-  font-weight: normal;
-  line-height: 34px;
-}
-
-.home_intro p {
-  float: left;
-  width: 660px;
 }
 
 .intro {
