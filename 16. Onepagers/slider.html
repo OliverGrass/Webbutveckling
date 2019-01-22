@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Slider</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.1.0/css/flag-icon.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+    crossorigin="anonymous">
+  <link rel="stylesheet" href="css/sliderstyle.css">
+  <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+  <script>
+
+    $(document).ready(function () {
+      $("form").submit(function (event) {
+        event.preventDefault();
+        alert("Hi " + $("input[name='name']").val()
+          + "\nWe have received your message!"
+          + "\nWe will be in touch with you using "
+          + $("input[name='email']").val()
+          + " as soon as possible!");
+
+        $("input[name='name']").val("");
+        $("input[name='email']").val("");
+        $("textarea[name='message']").val("");
+      });
+    });
+
+    var offset = 0;
+    $(document).ready(function () {
+
+      //settings for slider
+      var width = $("body").prop("clientWidth") + 10;
+      var animationSpeed = 1500;
+      var pause = 5000;
+      var currentSlide = 1;
+
+      //globals for slider
+      var interval;
+      var currentSlide;
+
+      //cache DOM elements
+      var $slider = $('#slider');
+      var $slideContainer = $('.slidecontainer', $slider);
+      var $slides = $('.slide', $slider);
+
+      //eventhandler for slider
+      $slideContainer
+        .on('mouseenter', pauseSlider)
+        .on('mouseleave', startSlider);
+
+
+      $(window).on('resize', function () {
+        pauseSlider;
+        width = document.documentElement.clientWidth;
+        currentSlide = 1;
+        $slideContainer.css('margin-left', 0);
+        startSlider;
+      });
+
+      function startSlider() {
+        interval = setInterval(function () {
+          $slideContainer.animate({ 'margin-left': '-=' + width }, animationSpeed, function () {
+            if (++currentSlide === $slides.length) {
+              currentSlide = 1;
+              $slideContainer.css('margin-left', 0);
+            }
+          });
+        }, pause);
+      }
+
+      function pauseSlider() {
+        clearInterval(interval);
+      }
+
+      startSlider();
+
+    });
+
+  </script>
+</head>
+
+<body>
+
+
+  <div id="menu">
+    <img src="images/logo.png" alt="logo">
+    <a href="#slider">TOP</a>
+    <a href="#second">MISSION</a>
+    <a href="#third">GUIDES</a>
+    <a href="#fourth">CONTACT</a>
+    <a href="#fifth">VISIT US</a>
+    <a href="#footer" style="float: right;">ABOUT</a>
+  </div>
+
+  <div id="slider">
+    <div class="slidecontainer">
+      <div id="top" class="slide">
+        <div class="info">
+          <img src="images/logo.png" alt="logo">
+          <h1>TRAVEL WITH US</h1>
+          <span class="infotext">Go to far away places and see the world</span>
+          <a href="#second"><i class="fa fa-angle-down fa-2x"></i></a>
+        </div>
+      </div>
+      <div id="firstslide" class="slide">
+        <div class="info">
+          <span class="flagsize flag-icon flag-icon-it"></span>
+          <h1>Rome the eternal city</h1>
+          <span class="infotext">SPQR - Senatus Populusque Romanus</span>
+          <a href="#second" class="button">Check it out!</a>
+        </div>
+      </div>
+      <div id="secondslide" class="slide">
+        <div class="info">
+          <span class="flagsize flag-icon flag-icon-cn"></span>
+          <h1>Great wall of China</h1>
+          <span class="infotext">Tan Daoji - "the long wall of 10,000 miles"</span>
+          <a href="#second" class="button">Check it out!</a>
+        </div>
+      </div>
+      <div id="thirdslide" class="slide">
+        <div class="info">
+          <span class="flagsize flag-icon flag-icon-pe"></span>
+          <h1>Machu Pichu</h1>
+          <span class="infotext">Ruins of an Ancient Civilization</span>
+          <a href="#second" class="button">Check it out!</a>
+        </div>
+      </div>
+      <div id="fourthslide" class="slide">
+        <div class="info">
+          <span class="flagsize flag-icon flag-icon-ca"></span>
+          <h1>Niagara Falls</h1>
+          <span class="infotext">"That's a lot of water"</span>
+          <a href="#second" class="button">Check it out!</a>
+        </div>
+      </div>
+      <div id="fifthslide" class="slide">
+        <div class="info">
+          <span class="flagsize flag-icon flag-icon-eg"></span>
+          <h1>The pyramids of giza</h1>
+          <span class="infotext">Wonders of the Ancient World</span>
+          <a href="#second" class="button">Check it out!</a>
+        </div>
+      </div>
+      <div id="sixthslide" class="slide">
+        <div class="info">
+          <span class="flagsize flag-icon flag-icon-in"></span>
+          <h1>Taj Mahal</h1>
+          <span class="infotext">An Emperor’s Passion Wrought in Stone</span>
+          <a href="#second" class="button">Check it out!</a>
+        </div>
+      </div>
+      <div id="seventhslide" class="slide">
+        <div class="info">
+          <span class="flagsize flag-icon flag-icon-mx"></span>
+          <h1>Chichén itzá</h1>
+          <span class="infotext"><i>The</i> Place to Visit in Mexico</span>
+          <a href="#second" class="button">Check it out!</a>
+        </div>
+      </div>
+      <div id="topslide" class="slide">
+      </div>
+    </div>
+  </div>
+  </div>
+
+  <div id="second" class="panel"></div>
+  <div id="secondcontent" class="panel">
+    <div class="leftnav">
+      <a href="#top"><p class="navtext">&#65087;</p></a>
+      <a href="#third"><p class="navtext">&#65088;</p></a>
+    </div>
+    <div class="info">
+      <div class="twocols">
+        <h1>OUR MISSION</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta ex itaque consectetur beatae facere, tempore dignissimos
+          iure cupiditate iste eos, quam ipsa ipsum ad laborum dolorem et asperiores sit, atque minima harum nemo nesciunt.
+          Molestiae alias excepturi facilis praesentium culpa dolore veniam repellat laboriosam nostrum voluptates deserunt
+          totam ratione facere, sit eveniet laborum aperiam voluptatibus officiis at adipisci minus dicta consectetur iusto.
+          Animi eos, eius dignissimos voluptatum quo vitae recusandae?</p>
+      </div>
+      <div class="twocols">
+        <h1>OUR GOAL</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta ex itaque consectetur beatae facere, tempore dignissimos
+          iure cupiditate iste eos, quam ipsa ipsum ad laborum dolorem et asperiores sit, atque minima harum nemo nesciunt.
+          Molestiae alias excepturi facilis praesentium culpa dolore veniam repellat laboriosam nostrum voluptates deserunt
+          totam ratione facere, sit eveniet laborum aperiam voluptatibus officiis at adipisci minus dicta consectetur iusto.
+          Animi eos, eius dignissimos voluptatum quo vitae recusandae?</p>
+      </div>
+    </div>
+  </div>
+
+  <div id="third" class="panel"></div>
+  <div id="thirdcontent" class="panel">
+    <div class="leftnav">
+      <a href="#second"><p class="navtext">&#65087;</p></a>
+      <a href="#fourth"><p class="navtext">&#65088;</p></a>
+    </div>
+    <div class="info">
+      <h1 class="guides">OUR GUIDES</h1>
+      <div class="fourcols">
+        <img src="images/female.png" alt="Female Character">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste impedit exercitationem voluptates reprehenderit
+          nobis cumque voluptate magni aliquid accusamus eius?</p>
+      </div>
+      <div class="fourcols">
+        <img src="images/male.png" alt="Male Character">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste impedit exercitationem voluptates reprehenderit
+          nobis cumque voluptate magni aliquid accusamus eius?</p>
+      </div>
+      <div class="fourcols">
+        <img src="images/female.png" alt="Female Character">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste impedit exercitationem voluptates reprehenderit
+          nobis cumque voluptate magni aliquid accusamus eius?</p>
+      </div>
+      <div class="fourcols">
+        <img src="images/male.png" alt="Male Character">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste impedit exercitationem voluptates reprehenderit
+          nobis cumque voluptate magni aliquid accusamus eius?</p>
+      </div>
+    </div>
+  </div>
+
+  <div id="fourth" class="panel"></div>
+  <div id="fourthcontent" class="panel">
+    <div class="leftnav">
+      <a href="#third"><p class="navtext">&#65087;</p></a>
+      <a href="#fifth"><p class="navtext">&#65088;</p></a>
+    </div>
+    <form class="info">
+      <div class="threecols">
+        <br>
+        <h1>SEND A MESSAGE</h1>
+      </div>
+      <div class="threecols forminput">
+        <p>
+          Name: <br>
+          <input class="field-long" type="text" name="name" placeholder="Please write your name here">
+        </p>
+        <p>
+          Email: <br>
+          <input type="email" name="email" placeholder="Please write your email here">
+        </p>
+        <p>
+          <input type="submit" value="Submit">
+        </p>
+      </div>
+      <div class="threecols forminput">
+        <p>
+          Message: <br>
+          <textarea class="field-textarea" name="message" placeholder="Please write your message here"></textarea>
+        </p>
+      </div>
+      <div class="threecols"></div>
+    </form>
+  </div>
+
+  <div id="fifth" class="panel"></div>
+  <div id="fifthcontent" class="panel">
+    <div class="leftnav">
+      <a href="#fourth"><p class="navtext">&#65087;</p></a>
+      <a href="#sixth"><p class="navtext">&#65088;</p></a>
+    </div>
+    <div class="info">
+      <div class="twocols" style="width: 20%; transform: translate(-0%, -88%);">
+        <h1>VISIT US</h1>
+      </div>
+      <div class="twocols" style="width: 60%; transform: translate(-0%, -8%);">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2248.2431666262596!2d13.175968115928578!3d55.70214488053981!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x465397ded38dcf73%3A0x8f3868f1d33a6044!2sPolhemskolan!5e0!3m2!1ssv!2sse!4v1535809235257"
+          width="700" height="250" frameborder="0" style="border:0" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+
+
+  <div id="footer" class="panel">
+    <a href="http://flag-icon-css.lip.is/" target="_blank">
+      <span class="fas fa-flag"></span> flag-icon-css
+    </a>
+    <a href="https://fontawesome.com/" target="_blank">
+      <span class="fab fa-font-awesome-flag"></span> font-awesome
+    </a>
+    <a href="https://jquery.com/" target="_blank">
+      <span class="fas fa-bolt"></span> jQuery
+    </a>
+    <a href="https://fonts.google.com/" target="_blank">
+      <span class="fab fa-google"></span> Google Fonts
+    </a>
+    <a href="https://en.wikipedia.org/wiki/Acme_Corporation" target="_blank">
+      <span class="fa fa-copyright"></span> ACME Software AB.
+    </a>
+
+  </div>
+
+  <script>
+    $("a").on("click", function (event) {
+      if (this.hash !== "");
+      {
+        event.preventDefault();
+
+        const hash = this.hash;
+
+        $("html, body").animate(
+          {
+            scrollTop: $(hash).offset().top
+          },
+          800,
+          function () {
+            window.location.hash = hash;
+          }
+        );
+      }
+    });
+  </script>
+</body>
+
+</html>
