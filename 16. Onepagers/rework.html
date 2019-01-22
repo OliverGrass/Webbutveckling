@@ -11,6 +11,74 @@
     crossorigin="anonymous">
   <link rel="stylesheet" href="css/rework.css">
   <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+  <script>
+
+    $(document).ready(function () {
+      $("form").submit(function (event) {
+        event.preventDefault();
+        alert("Hi " + $("input[name='name']").val()
+          + "\nWe have received your message!"
+          + "\nWe will be in touch with you using "
+          + $("input[name='email']").val()
+          + " as soon as possible!");
+
+        $("input[name='name']").val("");
+        $("input[name='email']").val("");
+        $("textarea[name='message']").val("");
+      });
+    });
+
+    var offset = 0;
+    $(document).ready(function () {
+
+      //settings for slider
+      var width = $("body").prop("clientWidth");
+      var animationSpeed = 2000;
+      var pause = 10000;
+      var currentSlide = 1;
+
+      //globals for slider
+      var interval;
+      var currentSlide;
+
+      //cache DOM elements
+      var $slider = $('#slider');
+      var $slideContainer = $('.slidecontainer', $slider);
+      var $slides = $('.slide', $slider);
+
+      /* $slideContainer
+        .on('mouseenter', pauseSlider)
+        .on('mouseleave', startSlider); */
+
+
+      $(window).on('resize', function () {
+        pauseSlider;
+        width = document.documentElement.clientWidth;
+        currentSlide = 1;
+        $slideContainer.css('margin-left', 0);
+        startSlider;
+      });
+
+      function startSlider() {
+        interval = setInterval(function () {
+          $slideContainer.animate({ 'margin-left': '-=' + width }, animationSpeed, function () {
+            if (++currentSlide === $slides.length) {
+              currentSlide = 1;
+              $slideContainer.css('margin-left', 0);
+            }
+          });
+        }, pause);
+      }
+
+      function pauseSlider() {
+        clearInterval(interval);
+      }
+
+      startSlider();
+
+    });
+
+  </script>
 </head>
 
 <body>
@@ -235,25 +303,6 @@
   </div>
 
   <script>
-    $("a").on("click", function (event) {
-      if (this.hash !== "");
-      {
-        event.preventDefault();
-
-        const hash = this.hash;
-
-        $("html, body").animate(
-          {
-            scrollTop: $(hash).offset().top
-          },
-          800,
-          function () {
-            window.location.hash = hash;
-          }
-        );
-      }
-    });
-
     function myFunction() {
       var x = document.getElementById("topnav");
       if (x.className === "menu") {
