@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Alegreya+Sans"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.3.0/css/flag-icon.css"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" href="css/bootcarouselstyle.css" />
+
+    <title>Boot Carousel</title>
+  </head>
+  <body data-spy="scroll" data-target=".navbar" data-offset="1">
+    <nav
+      id="nav"
+      class="navbar fixed-top navbar-expand-lg navbar-dark navbarstyle"
+    >
+      <a class="navbar-brand" href="#">TRAVEL WITH US</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link navlinkstyle" href="#top">TOP</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link navlinkstyle" href="#rome">ROME</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link navlinkstyle" href="#greatwall">GREAT WALL</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link navlinkstyle" href="#pyramids">GIZA</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link navlinkstyle" href="#machu">MACHU PICCHU</a>
+          </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+          <input
+            class="form-control mr-sm-2"
+            type="search"
+            placeholder="Search"
+            aria-label="Search"
+          />
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
+            Search
+          </button>
+        </form>
+      </div>
+    </nav>
+    <div id="top" style="overflow-x:hidden;" class="container-fluid h-100">
+      <div class="row h-100">
+        <div
+          id="carouselExampleIndicators"
+          class="carousel slide"
+          data-ride="carousel"
+        >
+          <ol class="carousel-indicators">
+            <li
+              data-target="#carouselExampleIndicators"
+              data-slide-to="0"
+              class="active"
+            ></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
+          </ol>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div class="top panel sizer">
+                <div class="info">
+                  <img src="img/logo.png" alt="logo" />
+                  <h1>TRAVEL WITH US</h1>
+                  <span class="infotext"
+                    >Go to far away places and see the world</span
+                  >
+                  <p style="margin-top: 15px;">
+                    <a href="#top" class="button">Check it out!</a>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="rome panel sizer">
+                <div class="info">
+                  <span class="flag-icon flag-icon-it flagsize"></span>
+                  <h1>ROME THE ETERNAL CITY</h1>
+                  <span class="infotext">Senatus Populusque Romanus</span>
+                  <a href="#top" class="button">Check it out!</a>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="greatwall panel sizer">
+                <div class="info">
+                  <span class="flag-icon flag-icon-cn flagsize"></span>
+                  <h1>GREAT WALL OF CHINA</h1>
+                  <span class="infotext"
+                    >Tan Daoji - "the long wall of 10,000 miles"</span
+                  >
+                  <a href="#top" class="button">Check it out!</a>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="pyramids panel sizer">
+                <div class="info">
+                  <span class="flag-icon flag-icon-eg flagsize"></span>
+                  <h1>THE PYRAMIDS OF GIZA</h1>
+                  <span class="infotext">Wonders of the Ancient World</span>
+                  <a href="#top" class="button">Check it out!</a>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="machu panel sizer">
+                <div class="info">
+                  <span class="flag-icon flag-icon-pe flagsize"></span>
+                  <h1>MACHU PICHU</h1>
+                  <span class="infotext">Ruins of an Ancient Civilization</span>
+                  <a href="#top" class="button">Check it out!</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <a
+            class="carousel-control-prev"
+            href="#carouselExampleIndicators"
+            role="button"
+            data-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a
+            class="carousel-control-next"
+            href="#carouselExampleIndicators"
+            role="button"
+            data-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid h-25 info">
+      <div class="row h-100 justify-content-center align-items-center">
+        <div class="col-12">
+          <h1>TRAVEL WITH US</h1>
+        </div>
+      </div>
+    </div>
+    <div id="rome" class="container-fluid h-50 panel"></div>
+    <div class="container-fluid h-50 info">
+      <div class="row h-100 justify-content-center align-items-center">
+        <div class="col-sm-11">
+          <span class="flag-icon flag-icon-it flagsize"></span>
+          <h1>ROME THE ETERNAL CITY</h1>
+          <span class="infotext">Senatus Populusque Romanus</span>
+          <a href="#top" class="button">Check it out!</a>
+        </div>
+        <div class="col-sm-1">
+          <a href="#top" class="nav">&#65087;</a>
+          <a href="#greatwall" class="nav">&#65088;</a>
+        </div>
+      </div>
+    </div>
+    <div id="greatwall" class="container-fluid h-50 panel"></div>
+    <div class="container-fluid h-50 info">
+      <div class="row h-100 justify-content-center align-items-center">
+        <div class="col-sm-11">
+          <span class="flag-icon flag-icon-cn flagsize"></span>
+          <h1>GREAT WALL OF CHINA</h1>
+          <span class="infotext"
+            >Tan Daoji - "the long wall of 10,000 miles"</span
+          >
+          <a href="#top" class="button">Check it out!</a>
+        </div>
+        <div class="col-sm-1">
+          <a href="#rome" class="nav">&#65087;</a>
+          <a href="#pyramids" class="nav">&#65088;</a>
+        </div>
+      </div>
+    </div>
+    <div id="pyramids" class="container-fluid h-50 panel"></div>
+    <div class="container-fluid h-50 info">
+      <div class="row h-100 justify-content-center align-items-center">
+        <div class="col-sm-11">
+          <span class="flag-icon flag-icon-eg flagsize"></span>
+          <h1>THE PYRAMIDS OF GIZA</h1>
+          <span class="infotext">Wonders of the Ancient World</span>
+          <a href="#top" class="button">Check it out!</a>
+        </div>
+        <div class="col-sm-1">
+          <a href="#greatwall" class="nav">&#65087;</a>
+          <a href="#machu" class="nav">&#65088;</a>
+        </div>
+      </div>
+    </div>
+    <div id="machu" class="container-fluid h-50 panel"></div>
+    <div class="container-fluid h-50 info">
+      <div class="row h-100 justify-content-center align-items-center">
+        <div class="col-sm-11">
+          <span class="flag-icon flag-icon-pe flagsize"></span>
+          <h1>MACHU PICHU</h1>
+          <span class="infotext">Ruins of an Ancient Civilization</span>
+          <a href="#top" class="button">Check it out!</a>
+        </div>
+        <div class="col-sm-1">
+          <a href="#pyramids" class="nav">&#65087;</a>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

@@ -1,0 +1,136 @@
+@import url("https://fonts.googleapis.com/css?family=Alegreya+Sans");
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Alegreya Sans", sans-serif;
+  color: #fff;
+  height: 100vh;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+#top {
+  background-image: url(../img/Golden_Gate_1920x1080.png);
+}
+
+#rome {
+  background-image: url(../img/Colosseum_1920x1080.png);
+}
+
+#greatwall {
+  background-image: url(../img/Great_Wall_1920x1080.png);
+}
+
+#pyramids {
+  background-image: url(../img/Pyramids_1920x1080.png);
+}
+
+#machu {
+  background-image: url(../img/Machu_Pichu_1920x1080.png);
+}
+
+.navbarstyle {
+  font-weight: bold;
+  font-size: 18px;
+  top: 0px;
+  background: rgba(255, 255, 255, 0.2);
+  text-shadow: 0px 0px 2px #000, 0px 0px 4px #000;
+}
+
+.navbar-dark .navbar-nav .navlinkstyle {
+  color: #e1e1e1;
+}
+
+.navbar-dark .navbar-nav .navlinkstyle:hover {
+  color: #fff;
+}
+
+.navbar-dark .navbar-nav .nav-link.active {
+  font-size: 20px;
+}
+
+.panel {
+  background-position: center center;
+  background-origin: border-box;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.info {
+  text-align: center;
+  text-shadow: 0px 0px 8px #000, 0px 0px 6px #000, 0px 0px 4px #000;
+  /* background-image: url('oldpapertexture NOT INCLUDED') */
+}
+
+.info img {
+  height: 150px;
+  width: 150px;
+  margin-bottom: 30px;
+}
+
+.info a {
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+  display: block;
+  padding: 3px;
+}
+
+.info h1 {
+  font-size: 40px;
+  letter-spacing: 8px;
+  font-weight: bold;
+  margin-bottom: 5px;
+  margin-top: 15px;
+}
+
+.info .infotext {
+  font-size: 20px;
+  letter-spacing: 3px;
+  font-weight: bold;
+}
+
+.info .button {
+  margin: 0px auto;
+  margin-top: 15px;
+  width: 140px;
+  border: 1px solid #fff;
+  box-shadow: 0px 0px 8px #000, 0px 0px 6px #000;
+  text-align: center;
+  padding: 5px;
+  background: #000;
+}
+
+.info .button:hover {
+  color: #000;
+  background: #fff;
+  text-shadow: 0px 0px 8px #fff;
+}
+
+.info .flagsize {
+  height: 40px;
+  width: 50px;
+}
+
+.info .nav {
+  font-size: 20px;
+}
+
+.bannerbox {
+  background-image: none;
+}
+
+@media screen and (max-width: 576px) {
+  .info .button {
+    display: none;
+  }
+}

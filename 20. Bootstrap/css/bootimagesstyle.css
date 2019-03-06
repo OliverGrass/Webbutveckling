@@ -1,0 +1,45 @@
+@import url("https://fonts.googleapis.com/css?family=Alegreya+Sans");
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Alegreya Sans", sans-serif;
+  color: #fff;
+  height: 100vh;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+#top {
+  background-image: url(../img/Golden_Gate_1920x1080.png);
+}
+
+#rome {
+  background-image: url(../img/Colosseum_1920x1080.png);
+}
+
+#greatwall {
+  background-image: url(../img/Great_Wall_1920x1080.png);
+}
+
+#pyramids {
+  background-image: url(../img/Pyramids_1920x1080.png);
+}
+
+#machu {
+  background-image: url(../img/Machu_Pichu_1920x1080.png);
+}
+
+.panel {
+  background-position: center center;
+  background-origin: border-box;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
