@@ -1,0 +1,21 @@
+{
+  "name": "messaging-app",
+  "version": "1.0.0",
+  "description": "A messaging app built using Node.js and Socket.io",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
+  },
+  "author": "Oliver Grass",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^8.1.0",
+    "ejs": "^2.6.1",
+    "express": "^4.16.4",
+    "express-session": "^1.16.2",
+    "passport": "^0.4.0",
+    "passport-auth0": "^1.2.1",
+    "socket.io": "^2.2.0"
+  }
+}

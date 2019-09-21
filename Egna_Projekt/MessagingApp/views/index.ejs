@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <style>
+    body {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items:center;
+    }
+    .container {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+      align-items: flex-start;
+      width: 50%;
+      height: 500px;
+    }
+    a {
+      display: block;
+      margin-top: 2rem;
+      width: 200px;
+      height: 2.4rem;
+      line-height: 2.4rem;
+      text-align: center;
+      font-weight: 600;
+      font-size: 1rem;
+      border-radius: 3px;
+      box-shadow: 3px 3px 3px var(--darkest-background);
+      transition: all 0.1s ease-in-out;
+    }
+    a:nth-child(1) {
+      background: var(--red-highlight);
+    }
+    a:nth-child(2) {
+      background: var(--blue-highlight);
+    }
+    a:hover {
+      transform: translateY(1px);
+      box-shadow: 0px 0px 6px var(--darkest-background);
+    }
+  </style>
+</head>
+<body>
+  <h1>Welcome, <%=username%></h1> 
+  <%if (!loggedin) {%>
+    <h1>You are not logged in</h1>
+    <a href="/login">Log in</a>
+  <%} else {%>
+  <h1>You are logged in</h1>
+  <div class="container">
+    <a href="/logout">Log out</a>
+    <a href="/main">Open</a>
+  </div>
+  <%}%>
+</body>
+</html>

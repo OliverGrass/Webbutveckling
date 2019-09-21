@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Discord2 | <%=title%></title>
+    <script src="../../socket.io/socket.io.js"></script>
+    <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body>
+    
+    <%include partials/messagingarea%>
+
+    <div id="userlistarea">
+      <ul id="users"></ul>
+      <div id="settings">        
+        <a href="/user">
+          <img height="32px" width="32px" src="<%-JSON.parse(userP).picture%>" alt="">
+        </a>
+        <span><%-JSON.parse(userP).nickname%></span>
+      </div>
+    </div>
+
+    <script>
+      let messageList = [];
+
+      const socket = io.connect("http://localhost:3000");
+
+      // submit text message without reload/refresh the page
+      $("form").submit(e => {
+        e.preventDefault(); // prevents page reloading
+        socket.emit("chat_message", $("#txt").val());
+        $("#txt").val("");
+        return false;
+      });
+
+      // append the chat text message
+      socket.on("chat_message", response => {
+        if (response.username != messageList[messageList.length-1].username)
+        {
+          $("#messages").append($("<hr>"));
+        }
+        $("#messages").append($("<li>").html("<span class='clock'>"+response.clock+"</span><span class='username'>"+response.username+"</span>: "+response.message));
+        $("#messages").scrollTop($("#messages")[0].scrollHeight);
+        messageList.push(response);
+      });
+
+      // append text if someone is online
+      socket.on("is_online", username => {
+        $("#messages").append($("<hr>"));
+        $("#messages").append($("<li>").html(username));
+      });
+
+      socket.on("online_users", array => {
+        $("#users").html("");
+        array.forEach(element => {
+          $("#users").append($("<a href='/channels'>").html(element))
+        });
+      });
+
+      socket.on("history", array => {
+        array.forEach((element,index) => {
+          $("#messages").append($("<li>").html("<span class='clock'>"+element.clock+"</span><span class='username'>"+element.username+"</span>: "+element.message));
+          if (index < (array.length) - 1) {
+            if (element.username != array[index+1].username) {
+            $("#messages").append($("<hr>"));
+            }
+          }
+          messageList.push(element);
+        });
+      });
+
+      const capitalize = (s) => {
+        if (typeof s !== 'string') return ''
+        return s.charAt(0).toUpperCase() + s.slice(1)
+      }
+
+      // send username to index.js
+      let username = $("#settings span").html()
+      socket.emit("username", capitalize(username));
+    </script>
+  </body>
+</html>
